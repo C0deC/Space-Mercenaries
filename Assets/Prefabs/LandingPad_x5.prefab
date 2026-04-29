@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: scoreMultiplier
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1057082854496657982, guid: 2114dd4dff88b8d4892a38cd8835c4ca, type: 3}
+      propertyPath: scoreMultiplier
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882190260449071104, guid: 2114dd4dff88b8d4892a38cd8835c4ca, type: 3}
+      propertyPath: m_text
+      value: x5
+      objectReference: {fileID: 0}
     - target: {fileID: 4325553131548194117, guid: 2114dd4dff88b8d4892a38cd8835c4ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -92,7 +100,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: LandingPad_x5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 480592455785635271, guid: 2114dd4dff88b8d4892a38cd8835c4ca, type: 3}
+    - {fileID: 1131612915799293468, guid: 2114dd4dff88b8d4892a38cd8835c4ca, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

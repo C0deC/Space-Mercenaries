@@ -360,8 +360,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4325553131548194117}
   - component: {fileID: 7787101465913764240}
-  - component: {fileID: 480592455785635271}
-  - component: {fileID: 1131612915799293468}
+  - component: {fileID: 1057082854496657982}
+  - component: {fileID: 5206891966405769329}
   m_Layer: 0
   m_Name: 'LandingPad '
   m_TagString: Untagged
@@ -433,7 +433,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.5557966, y: 1.5885453}
   m_EdgeRadius: 0
---- !u!114 &480592455785635271
+--- !u!114 &1057082854496657982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -442,11 +442,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8172707730671780285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a420c9fc3580a140a170a616ce2b4fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 51517f6c4a4567b46bcce53b34bbffd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scoreMultiplier: 1
---- !u!114 &1131612915799293468
+--- !u!114 &5206891966405769329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8172707730671780285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ba88a03f0c0689489f195071d97134b, type: 3}
+  m_Script: {fileID: 11500000, guid: eb80aaf64ed03ca4494e7de2213c5d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scoreMultiplierTextMesh: {fileID: 1882190260449071104}
