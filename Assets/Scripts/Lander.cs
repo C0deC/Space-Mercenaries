@@ -5,16 +5,26 @@ using UnityEngine.InputSystem;
 
 public class Lander : MonoBehaviour
 {
+    public static Lander Instance {get; private set;}
+
+
     public event EventHandler OnUpForce;
     public event EventHandler OnRightForce;
     public event EventHandler OnLeftForce;
     public event EventHandler OnBeforeForce;
+    public event EventHandler OnCoinPickup;
+    public event EventHandler<OnLandedEventArgs> OnLanded;
+    public class OnLandedEventArgs : EventArgs
+    {
+        public int score;
+    }
 
     private Rigidbody2D landerRigidbody2D;
     private float fuelAmount = 10f;
 
     private void Awake()
     {
+        Instance = this;
         landerRigidbody2D = GetComponent<Rigidbody2D>();
     }
     
@@ -22,7 +32,6 @@ public class Lander : MonoBehaviour
     {
         OnBeforeForce?.Invoke(this, EventArgs.Empty);
 
-        Debug.Log(fuelAmount);
         if(fuelAmount <= 0f)
         {
             // No fuel
@@ -65,6 +74,7 @@ public class Lander : MonoBehaviour
         float relativeVelocityMagnitude = collision2D.relativeVelocity.magnitude;
         if(relativeVelocityMagnitude > softLandingVelocityMagnitude)
         {
+            // Landed too hard!
             Debug.Log("Landed too hard!!");
             return;
         }
@@ -73,6 +83,7 @@ public class Lander : MonoBehaviour
         float minDotVector = 0.90f;
         if(dotVector < minDotVector)
         {
+            // Landed on a too steep angle!
             Debug.Log("Landed on a too steep angle!");
             return;
         }
@@ -92,6 +103,10 @@ public class Lander : MonoBehaviour
         int score = Mathf.RoundToInt((landingAngleScore + landingSpeedScore) * landingPad.getScoreMultiplier());
 
         Debug.Log("score: " + score);
+        OnLanded?.Invoke(this, new OnLandedEventArgs
+        {
+            score = score
+        });
     }
 
     private void OnTriggerEnter2D(Collider2D collider2D)
@@ -105,6 +120,7 @@ public class Lander : MonoBehaviour
 
         if(collider2D.gameObject.TryGetComponent(out CoinPickup coinPickup))
         {
+            OnCoinPickup?.Invoke(this, EventArgs.Empty);
             coinPickup.DestroySelf();
         }
     }
