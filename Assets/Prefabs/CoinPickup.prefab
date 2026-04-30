@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7886445719714652841}
   - component: {fileID: 6096475055752611265}
-  - component: {fileID: 4603729803574242850}
+  - component: {fileID: 3580163981864309369}
   m_Layer: 0
   m_Name: CoinPickup
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &4603729803574242850
+--- !u!114 &3580163981864309369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,6 +166,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7419602649177935164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d182b718fad73d744a3468e2a14d0e90, type: 3}
+  m_Script: {fileID: 11500000, guid: 0584419d66126a34cb77dbf222cb56f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

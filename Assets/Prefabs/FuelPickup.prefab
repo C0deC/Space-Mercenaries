@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654332135965635087}
   - component: {fileID: 2168638635577215128}
-  - component: {fileID: 8340926801144373766}
+  - component: {fileID: 8374642218167778049}
   m_Layer: 0
   m_Name: FuelPickup
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &8340926801144373766
+--- !u!114 &8374642218167778049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,6 +166,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3389546906425574153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 819c19a1b60fb144aa79567407d97dd3, type: 3}
+  m_Script: {fileID: 11500000, guid: 307545084ca05fc41a2062f3f70b27c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
