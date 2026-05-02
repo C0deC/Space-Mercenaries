@@ -243,7 +243,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 287212149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 430829b8fcca6d0488b6f7787f162404, type: 3}
+  m_Script: {fileID: 11500000, guid: 23b02da110b0512409b4fb37d3f557aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playButton: {fileID: 590376775}
@@ -609,7 +609,7 @@ RectTransform:
   m_GameObject: {fileID: 709299244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2420001, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 287212150}
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1404028623067837608, guid: dc96e3ccb2ba4d842bdc0fe57cf87ad1, type: 3}
+  m_Sprite: {fileID: 1404028623067837608, guid: 130f03e57c0e3bc49b271f69162a49af, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

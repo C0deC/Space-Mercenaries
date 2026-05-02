@@ -5103,15 +5103,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2118908047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215fe7b8546d49a40a951bed740bbc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 61369ccba3367304a9474fb0af1a153f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   resumeButton: {fileID: 584032749}
   mainMenuButton: {fileID: 864132121}
-  soundVolumeButton: {fileID: 254301072}
-  soundVolumeTextMesh: {fileID: 1373888479}
-  musicVolumeButton: {fileID: 48846094}
-  musicVolumeTextMesh: {fileID: 1755529051}
 --- !u!1001 &5210869218484672755
 PrefabInstance:
   m_ObjectHideFlags: 0
