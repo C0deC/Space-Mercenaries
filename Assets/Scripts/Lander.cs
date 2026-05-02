@@ -66,9 +66,9 @@ public class Lander : MonoBehaviour
         {
             default:
             case State.WaitingToStart:
-                if(Keyboard.current.wKey.isPressed ||
-                   Keyboard.current.aKey.isPressed ||
-                   Keyboard.current.dKey.isPressed)
+                if(GameInput.Instance.IsUpActionPressed() ||
+                   GameInput.Instance.IsLeftActionPressed() ||
+                   GameInput.Instance.IsRightActionPressed())
                 {
                     landerRigidbody2D.gravityScale = GRAVITY_NORMAL;
                     SetState(State.Normal);
@@ -81,27 +81,27 @@ public class Lander : MonoBehaviour
                     return;
                 }
 
-                if(Keyboard.current.wKey.isPressed ||
-                   Keyboard.current.aKey.isPressed ||
-                   Keyboard.current.dKey.isPressed)
+                if(GameInput.Instance.IsUpActionPressed() ||
+                   GameInput.Instance.IsLeftActionPressed() ||
+                   GameInput.Instance.IsRightActionPressed())
                 {
                     ConsumeFuel();
                 }
 
-                if (Keyboard.current.wKey.isPressed)
+                if (GameInput.Instance.IsUpActionPressed())
                 {
                     float force = 700f;
                     landerRigidbody2D.AddForce(force * transform.up * Time.deltaTime);
                     OnUpForce?.Invoke(this, EventArgs.Empty);
                 }
-                if (Keyboard.current.aKey.isPressed)
+                if (GameInput.Instance.IsLeftActionPressed())
                 {
                     float turnSpeed = +100f;
                     landerRigidbody2D.AddTorque(turnSpeed * Time.deltaTime);
                     OnLeftForce?.Invoke(this, EventArgs.Empty);
 
                 }
-                if (Keyboard.current.dKey.isPressed)
+                if (GameInput.Instance.IsRightActionPressed())
                 {
                     float turnSpeed = -100f;
                     landerRigidbody2D.AddTorque(turnSpeed * Time.deltaTime);
