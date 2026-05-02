@@ -123,8 +123,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 6.498169, y: 7.47062, z: 0}
-    m_Extent: {x: 56.638355, y: 15.8184185, z: 0}
+    m_Center: {x: 7.2106743, y: 4.1752653, z: 0}
+    m_Extent: {x: 59.844643, y: 19.113773, z: 0}
   m_SpriteSortPoint: 0
 --- !u!114 &1000245724873648422
 MonoBehaviour:
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 0
     m_ControlPoints:
-    - position: {x: -19.444942, y: -6.541483, z: 0}
+    - position: {x: -18.37618, y: -14.379083, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -50.140186, y: -6.480624, z: 0}
+    - position: {x: -52.63397, y: -14.318212, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 63.136524, y: -8.347798, z: 0}
+    - position: {x: 67.05532, y: -14.938508, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -322,8 +322,8 @@ MonoBehaviour:
   m_Creator: {fileID: 0}
   m_Modifiers: []
   m_ColliderSegment:
-  - {x: -19.444942, y: -6.541483}
-  - {x: -50.140186, y: -6.480624}
+  - {x: -18.376183, y: -14.379083}
+  - {x: -52.63397, y: -14.318212}
   - {x: -38.878345, y: 18.662083}
   - {x: -26.960386, y: 22.517776}
   - {x: -17.053082, y: 23.28904}
@@ -341,8 +341,8 @@ MonoBehaviour:
   - {x: 30.526085, y: 0.7653942}
   - {x: 34.548645, y: 12.966859}
   - {x: 51.82754, y: 17.789103}
-  - {x: 63.136524, y: -8.347798}
-  - {x: -19.444942, y: -6.541483}
+  - {x: 67.05532, y: -14.938508}
+  - {x: -18.376183, y: -14.379083}
   m_ShadowSegment: []
 --- !u!60 &8188160799292895464
 PolygonCollider2D:
@@ -390,8 +390,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -19.444942, y: -6.541483}
-      - {x: -50.140186, y: -6.480624}
+    - - {x: -18.376183, y: -14.379083}
+      - {x: -52.63397, y: -14.318212}
       - {x: -38.878345, y: 18.662083}
       - {x: -26.960386, y: 22.517776}
       - {x: -17.053082, y: 23.28904}
@@ -409,8 +409,8 @@ PolygonCollider2D:
       - {x: 30.526085, y: 0.7653942}
       - {x: 34.548645, y: 12.966859}
       - {x: 51.82754, y: 17.789103}
-      - {x: 63.136524, y: -8.347798}
-      - {x: -19.444942, y: -6.541483}
+      - {x: 67.05532, y: -14.938508}
+      - {x: -18.376183, y: -14.379083}
   m_UseDelaunayMesh: 0
 --- !u!1 &2292905843542373727
 GameObject:
@@ -499,6 +499,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelNumber: 2
   landerStartPositionTransform: {fileID: 8613937956815667738}
+  cameraStartTargetTransform: {fileID: 1066977766579672448}
+  zoomedOutOrthographicSize: 30
 --- !u!1001 &701927951136625737
 PrefabInstance:
   m_ObjectHideFlags: 0
