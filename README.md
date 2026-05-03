@@ -11,6 +11,20 @@ Space Mercenaries es un prototipo de videojuego que combina físicas 2D con mec�
 - Aterrizar en plataformas seguras.
 - Evitar aterrizajes demasiado rápidos, con ángulos incorrectos o fuera de la zona de aterrizaje.
 - Recoger monedas y potenciadores de combustible.
+- Superar niveles con múltiples terrenos y cámaras dinámicas.
+
+## Nuevas implementaciones
+
+- Sistema de niveles con progreso secuencial y carga de escenas `GameScene`, `MainMenuScene` y `GameOverScene`.
+- Cámara con seguimiento dinámico y zoom adaptado a cada nivel usando `CinemachineCameraZoom2D`.
+- Calculadora de puntuación avanzada para aterrizajes: combina velocidad de impacto, ángulo de la nave y multiplicador de la plataforma de aterrizaje.
+- Multiplicadores de puntuación por plataforma (`LandingPad`) para incentivar aterrizajes precisos.
+- Pickups de combustible que recargan el tanque y monedas que otorgan puntos adicionales.
+- Pantalla de resultado de aterrizaje con opciones de continuar o reintentar según el tipo de aterrizaje.
+- Menú principal con inicio de partida y salida del juego.
+- UI de pausa y ajuste de volumen de sonido y música.
+- Gestor de audio para efectos de pickup y música en el juego.
+- Registro de tiempo de partida y puntuación acumulada entre niveles.
 
 ## Características principales
 
@@ -19,14 +33,17 @@ Space Mercenaries es un prototipo de videojuego que combina físicas 2D con mec�
 - Puntuación por aterrizajes suaves y por recogida de monedas.
 - Diferentes tipos de fracaso: aterrizaje en zona incorrecta, ángulo demasiado pronunciado, velocidad excesiva.
 - Integración con Unity Input System.
-- Interfaz de usuario para estadísticas, puntuación y estado del aterrizaje.
+- Compatibilidad con teclado y gamepad (entrada analógica para movimiento y rotación).
+- Interfaz de usuario para estadísticas, puntuación, velocidad y combustible.
+- Feedback visual de velocidad mediante flechas direccionales.
+- Sistema de pausa con opciones de menú y ajuste de volumen.
 
 ## Controles
 
 - `W` o `↑` : Empuje hacia arriba
 - `A` o `←` : Girar a la izquierda
 - `D` o `→` : Girar a la derecha
-- `Esc` : Acceder al menú
+- `Esc` : Acceder al menú / pausar y reanudar
 
 Además, el proyecto ofrece compatibilidad con gamepad para dirección y botones de acción.
 
@@ -34,11 +51,18 @@ Además, el proyecto ofrece compatibilidad con gamepad para dirección y botones
 
 - `Assets/Scenes/` : escenas del juego.
 - `Assets/Scripts/` : lógica del juego.
-  - `Lander.cs` : control del módulo espacial y evaluación del aterrizaje.
-  - `GameManager.cs` : gestión de puntuación y tiempo.
-  - `LanderVisuals.cs` : VFX y animaciones de la nave.
-  - `LandedUI.cs` : IU de aterrizaje.
-  - `StatsUI.cs` : indicadores de velocidad y combustible.
+  - `GameManager.cs` : gestión de niveles, puntuación, tiempo y pausa.
+  - `SceneLoader.cs` : carga de escenas del juego.
+  - `GameInput.cs` : encapsula la entrada de Unity Input System.
+  - `GameLevel.cs` : define posiciones de inicio y configuración de cada nivel.
+  - `Lander.cs` : control del módulo espacial, consumo de combustible, pickups y lógica de aterrizaje.
+  - `LandingPad.cs` : multiplicador de puntuación para plataformas de aterrizaje.
+  - `LandedUI.cs` : IU de resultados de aterrizaje y botones de continuar/reintentar.
+  - `StatsUI.cs` : indicadores de velocidad, combustible, nivel, puntaje y tiempo.
+  - `PausedUI.cs` : IU de pausa y ajustes de audio.
+  - `GameOverUI.cs` : IU de fin de partida y puntuación total.
+  - `SoundManager.cs` / `MusicManager.cs` : gestión de efectos y música.
+  - `LanderVisuals.cs` : efectos visuales y animaciones de la nave.
 - `Assets/InputActions.cs` : definición de acciones de control con Unity Input System.
 - `ProjectSettings/ProjectVersion.txt` : versión compatible de Unity.
 
@@ -46,6 +70,7 @@ Además, el proyecto ofrece compatibilidad con gamepad para dirección y botones
 
 - Unity 6.0.1f1 (según `ProjectSettings/ProjectVersion.txt`).
 - Paquetes de Unity estándar y Input System.
+- Cinemachine para el control de cámara.
 
 ## Cómo abrir el proyecto
 
